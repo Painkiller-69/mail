@@ -1,0 +1,22 @@
+const nodemailer = require('nodemailer');
+
+let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      type: 'OAuth2',
+      user: 'testthk21',
+      pass: 'test21pass',
+      clientId: '314418315723-8o81903kip0relulq2mkibu1adgkb4jr.apps.googleusercontent.com',
+      clientSecret: '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',
+      refreshToken: 'ya29.a0AWY7CkkunuMdJf3EaiF-xpJIp5-x8UWBO92BNfLIZ47yqHILgcMaMDG8xK6bPycuAG1Hqjcn2tQC2Jr9fJumtQ-hiZ3lMmavs6D1kzDpwevpn4Q3wNPm_kkRvPmGWtCcSUzu0Zf90d4p_4jxb07oRF8kj6YFTBm1aCgYKAdsSARISFQG1tDrpdZkf2illijmaOeXag6Tsrg0167'
+    }
+  });
+
+  let mailOptions = {
+    from: 'testthk21@gmail.com',
+    to: 'painkiller7813@gmail.com',
+    subject: 'Nodemailer Project',
+    text: 'your random text here like sgp_bba28c101bf66979715215ed8bf5aa15ff274a16',
+  };
+
+  transporter.sendMail(mailOptions, function(err, data) {});
